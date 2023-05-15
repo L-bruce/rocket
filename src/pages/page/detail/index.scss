@@ -1,0 +1,42 @@
+.detail-container {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 680px;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    transform: scale3d(1, 1, 1);
+    padding: 8px;
+    position: relative;
+
+    :global {
+        .video {
+            width: 100%;
+            padding: 0;
+        }
+
+        .title {
+            margin: 8px 3px;
+            font-size: 12px;
+        }
+
+        .date {
+            margin: 8px 3px;
+        }
+
+        .ant-spin-spinning {
+            position: static;
+            display: inline-block;
+            opacity: 1;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+/* // 箭头 */
+
+/* // 箭头公用类 */
+@mixin arrow() {
+    position: relative;
+
+    &:after,
+    &>after {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        content: "";
+    }
+}
+
+/* // 箭头向上 */
+@mixin arrow-up($width, $color, $border-width) {
+    @include arrow();
+
+    &:after {
+        width: $width;
+        height: $width;
+        border: solid $color;
+        border-width: $border-width $border-width 0 0;
+        transform: translate(0, -30%) rotate(-45deg);
+        border-top-right-radius: 1px;
+    }
+}
+
+/* // 箭头向下 */
+@mixin arrow-down($width, $color, $border-width) {
+    @include arrow();
+
+    &:after {
+        width: $width;
+        height: $width;
+        border: solid $color;
+        border-width: $border-width $border-width 0 0;
+        transform: translate(0, -60%) rotate(135deg);
+        border-top-right-radius: 1px;
+    }
+}
+
+/* // 箭头向左 */
+@mixin arrow-left($width, $color, $border-width) {
+    @include arrow();
+
+    &:after {
+        width: $width;
+        height: $width;
+        border: solid $color;
+        border-width: $border-width $border-width 0 0;
+        transform: translate(0, -50%) rotate(225deg);
+        border-top-right-radius: 1px;
+    }
+}
+
+/* // 箭头向右 */
+@mixin arrow-right($width, $color, $border-width) {
+    @include arrow();
+
+    &:after {
+        width: $width;
+        height: $width;
+        border: solid $color;
+        border-width: $border-width $border-width 0 0;
+        transform: translate(0, -50%) rotate(45deg);
+        border-top-right-radius: 1px;
+    }
+}
+
+/* // 实心箭头公用类 */
+@mixin arrow-solid() {
+    position: relative;
+
+    &:after,
+    &>after {
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+        width: 0;
+        height: 0;
+        content: "";
+        position: absolute;
+        top: 50%;
+        border-style: solid;
+        transform: translate(0px, -50%);
+    }
+}
+
+/* // 实心向上箭头 */
+@mixin arrow-solid-up($color, $border-width) {
+    @include arrow-solid();
+
+    &:after {
+        border-color: transparent transparent $color transparent;
+        border-width: 0 $border-width $border-width $border-width;
+    }
+}
+
+/* // 实心向下箭头 */
+@mixin arrow-solid-down($color, $border-width) {
+    @include arrow-solid();
+
+    &:after {
+        border-color: $color transparent transparent transparent;
+        border-width: $border-width $border-width 0 $border-width;
+    }
+}
+
+/* // 实心向左箭头 */
+@mixin arrow-solid-left($color, $border-width) {
+    @include arrow-solid();
+
+    &:after {
+        border-color: transparent $color transparent transparent;
+        border-width: $border-width $border-width $border-width 0;
+    }
+}
+
+/* // 实心向右箭头 */
+@mixin arrow-solid-right($color, $border-width) {
+    @include arrow-solid();
+
+    &:after {
+        border-color: transparent transparent transparent $color;
+        border-width: $border-width 0 $border-width $border-width;
+    }
+}
+
+

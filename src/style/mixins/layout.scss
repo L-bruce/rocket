@@ -1,0 +1,31 @@
+/* // 基本页面布局 */
+
+/* // 左右布局（左边图片，右边文字描述） */
+@mixin layout-mate($width, $height, $left) {
+    overflow: hidden;
+
+    .meta-avatar {
+        float: left;
+        width: $width;
+        height: $height;
+
+        img {
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .meta-content {
+        margin-left: $left;
+
+        .meta-title {
+            overflow: hidden;
+        }
+
+        .meta-description {
+            overflow: hidden;
+        }
+    }
+
+}

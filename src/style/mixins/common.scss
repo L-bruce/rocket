@@ -1,0 +1,62 @@
+@import "color.scss";
+
+@mixin hover-shadow() {
+    transition: all 0.3s;
+
+    &:hover {
+        border: 1px solid $green;
+        box-shadow: 0px 0px 6px rgba(10, 183, 109, 0.3);
+    }
+}
+
+/* // 移动上去显示手势 */
+@mixin hand-move() {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* // ...查看全文 */
+@mixin show-more($bg: #fff) {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 4px;
+    color: $green;
+    background-color: $bg;
+
+    &:before {
+        position: absolute;
+        left: -14px;
+        top: 2px;
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        /* background: url('~@/images/company/more-bg-white.png') no-repeat; */
+        background-size: 14px 100%;
+        vertical-align: text-top;
+    }
+    i {
+        color: #666;
+    }
+    span {
+        padding-left: 10px;
+    }
+}
+
+// Placeholder text
+@mixin placeholder($color: #c7c7c7) {
+    &::-moz-placeholder {
+        opacity: 1;
+    }
+
+    &::placeholder {
+        color: $color;
+    }
+
+    &:placeholder-shown {
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,49 @@
+/* // 网站主题色 */
+$text-blue: #6f5cfa; /* 文字主题色 */
+$green: #12c19e;
+
+// 灰色系列
+$grey-base: #666666;
+$grey-2: #333333;
+$grey-3: #aaaaaa;
+$grey-4: #c7c7c7;
+$grey-5: #e5e5e5; // 边框色
+$grey-6: #f5f7fa; // 灰色背景色
+$grey-7: #fafbfe; // 灰色背景色2
+
+// 绿色系列
+$green-base: $green;
+$green-2: #41cdb1;
+$green-3: #71dac5;
+$green-4: #a0e6d8;
+$green-5: #d0f3ec; // 绿色边框色
+$green-6: #e7f9f5; // 绿色背景色
+
+// 黄色系列 （警告色）
+$gold-base: #fe9800;
+$gold-1: #ffdd8a;
+$gold-6: #faad14;
+
+// 红色系列
+$red-base: #f35372;
+$red-1: #ff6d50; // 红色标签颜色
+$red-error: $red-base;
+$red-6: #ffebeb; // 红色标签背景色
+
+// 蓝色系列
+$blue-base: #5f88fa;
+
+// 紫色系列
+$violet-base: #8160db;
+
+// 文字颜色
+$text-base: $grey-base;
+$text-blod: $grey-2;
+$text-grey: $grey-3;
+$text-grey-2: $grey-4;
+
+$white: #ffffff;
+$black: #000000;
+
+$borderColor: $grey-5;
+$bgColor: $grey-6;

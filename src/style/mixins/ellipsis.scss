@@ -1,0 +1,10 @@
+/* // 默认文字超出显示3个点，可设置其他值 */
+@mixin ellipsis($val: ellipsis) {
+    text-overflow: $val;
+    -o-text-overflow: $val;
+    -ms-text-overflow: $val;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    word-wrap: normal;
+}

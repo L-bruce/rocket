@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+        <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
+        <% } %>
+</head>
+
+<body>
+    <div id="app-root" class="app-container"></div>
+    <% if (isProd) { %>
+        <% for (var js in htmlWebpackPlugin.files.js) { %>
+            <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>" crossorigin="anonymous"></script>
+            <% } %>
+                <% } else { %>
+                    <% for (var js in htmlWebpackPlugin.files.js) { %>
+                        <script type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
+                        <% } %>
+                            <% } %>
+</body>
+
+</html>

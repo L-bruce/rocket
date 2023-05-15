@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+@import 'mixins/color.scss';
+
+:global {
+    * {
+        box-sizing: border-box;
+    }
+
+    a,
+    b,
+    body,
+    button,
+    dd,
+    div,
+    dl,
+    em,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    i,
+    input,
+    label,
+    li,
+    nav,
+    p,
+    select,
+    span,
+    td,
+    textarea,
+    u,
+    ul {
+        padding: 0;
+        margin: 0;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: none;
+    }
+
+    li,
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    a:active,
+    a:focus,
+    a:hover,
+    button,
+    input,
+    textarea {
+        outline: 0;
+    }
+
+    a {
+        transition: all linear 0.2s;
+        text-decoration: none;
+
+        &:hover {
+            color: #5f2eea;
+            text-decoration: none;
+        }
+    }
+
+    img {
+        border: none;
+    }
+
+    map area {
+        outline: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    body,
+    button,
+    input,
+    option,
+    select,
+    td,
+    textarea {
+        font-family: arial, verdana, helvetica, 'PingFang SC', 'HanHei SC', STHeitiSC-Light, Microsoft Yahei, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    input[type='button'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='submit'],
+    input[type='tel'],
+    input[type='text'],
+    textarea {
+        -webkit-appearance: none;
+    }
+
+    body {
+        background: #f9fafc !important;
+        font-size: 14px;
+        font-variant: tabular-nums;
+        -webkit-font-feature-settings: 'tnum';
+        font-feature-settings: 'tnum';
+        color: #1d2129;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+    body {
+        // height: 100.1%;
+
+        &.page-white {
+            background: #fff;
+        }
+    }
+
+    .clear {
+        clear: both;
+        display: block;
+        line-height: 0;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        height: 0;
+        clear: both;
+    }
+
+    .inner {
+        width: 1200px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .vline {
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        vertical-align: middle;
+        background: #e0e0e0;
+        margin: 0 10px;
+    }
+
+    .vdot {
+        display: inline-block;
+        padding: 0 10px 0 7px;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #6f5cfa;
+    }
+
+    ::-moz-selection {
+        color: #fff;
+        background: #6f5cfa;
+    }
+
+    /* // input placeholder */
+    input::-webkit-input-placeholder {
+        color: #86909c;
+    }
+
+    input:-ms-input-placeholder {
+        color: #86909c;
+    }
+
+    input:-moz-placeholder {
+        color: #86909c;
+    }
+
+    input::-moz-placeholder {
+        color: #86909c;
+    }
+
+    /* // textarea placeholder */
+    textarea::-webkit-input-placeholder {
+        color: #86909c;
+    }
+
+    textarea:-ms-input-placeholder {
+        color: #86909c;
+    }
+
+    textarea:-moz-placeholder {
+        color: #86909c;
+    }
+
+    textarea::-moz-placeholder {
+        color: #86909c;
+    }
+
+    /* // 滚动条样式 */
+    body ::-webkit-scrollbar {
+        height: 5px;
+        width: 5px;
+    }
+
+    body ::-webkit-scrollbar-thumb {
+        background-color: $borderColor;
+        border-radius: 5px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    body ::-webkit-scrollbar-thumb:hover {
+        background-color: #bfc1c9;
+    }
+}
